@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Passageway::VERSION
   spec.authors       = ["R. Tyler Croy"]
   spec.email         = ["tyler@monkeypox.org"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = "A Ruby-based client for localtunnel"
+  spec.summary       = "This is a fork off the original localtunnel Ruby gem, which has since been deprecated"
+  spec.homepage      = "https://github.com/rtyler/passageway"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
