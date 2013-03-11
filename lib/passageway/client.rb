@@ -54,7 +54,14 @@ module Passageway
         end
         puts "   Port #{port} is now publicly accessible from http://#{tunnel['host']} ..."
         begin
-          sleep 1 while true
+          # If we're using Passageway from within Ruby
+          if block_given?
+            yield
+          else
+            # Otherwise, we're probably calling it on the command line, so
+            # let's just block forever
+            sleep 1 while true
+          end
         rescue Interrupt
           gateway.close_remote(rp, rh)
           exit
